@@ -59,9 +59,22 @@ class FunctionsTest < MiniTest::Test
 
 # 4. Work out the index position of "Linlithgow"
 
-  # def test_find_index_of_item__livingston()
-  #   stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
-  #   result = find_index_of_item("Livingston")
-  #   assert_equal(4, result)
-  # end
+  def test_find_index_of_stop__livingston()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = find_index_of_stop(stops_array, "Livingston")
+    assert_equal(4, result)
+  end
+
+  def test_find_index_of_stop__cumbernauld()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = find_index_of_stop(stops_array, "Cumbernauld")
+    assert_equal(1, result)
+  end
+
+  def test_find_index_of_stop__bananas()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = find_index_of_stop(stops_array, "Bananas")
+    assert_equal(nil, result)
+  end
+
 end

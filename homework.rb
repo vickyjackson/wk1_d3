@@ -17,10 +17,10 @@ def add_stop_to_point(stops_array, stop_to_find, new_stop)
   return result
 end
 
-# def find_index_of_item(stop_to_find)
-# end
-
-
+def find_index_of_stop(stops_array, stop_to_find)
+  result = stops_array.index(stop_to_find)
+  return result
+end
 
 # 5. Remove `"Livingston"` from the array using its name
 
