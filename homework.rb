@@ -1,23 +1,26 @@
 
 stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
 
-def add_to_end(array, string)
-  result = array.push(string)
+def add_stop_to_end(stops_array, new_stop)
+  result = stops_array.push(new_stop)
   return result
 end
 
-def add_to_start(array, string)
-  result = array.unshift(string)
+def add_stop_to_start(stops_array, new_stop)
+  result = stops_array.unshift(new_stop)
   return result
 end
 
-def add_to_point(array, stop, string)
-  index_of_item = array.index(stop)
-  result = array.insert((index_of_item + 1), string)
+def add_stop_to_point(stops_array, stop_to_find, new_stop)
+  index_of_item = stops_array.index(stop_to_find)
+  result = stops_array.insert((index_of_item + 1), new_stop)
   return result
 end
 
-# 4. Work out the index position of "Linlithgow"
+# def find_index_of_item(stop_to_find)
+# end
+
+
 
 # 5. Remove `"Livingston"` from the array using its name
 
