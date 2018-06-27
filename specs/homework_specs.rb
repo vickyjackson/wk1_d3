@@ -74,7 +74,7 @@ class FunctionsTest < MiniTest::Test
   def test_find_index_of_stop__bananas()
     stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
     result = find_index_of_stop(stops_array, "Bananas")
-    assert_equal(nil, result)
+    assert_nil(nil, result)
   end
 
 # 5. Remove "Livingston" from the array using its name
@@ -118,5 +118,25 @@ class FunctionsTest < MiniTest::Test
     result = count_stops_in_array(stops_array)
     assert_equal(3, result)
   end
+
+# 8. How many ways can we return `"Falkirk High"` from the array? Not testable :(
+# No test!
+
+# 9. Reverse the positions of the stops in the array
+
+  def test_reverse_stops_in_array__default_array()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = reverse_stops_in_array(stops_array)
+    assert_equal([ "Haymarket", "Livingston", "Linlithgow", "Falkirk High", "Cumbernauld", "Croy" ], result)
+  end
+
+  def test_reverse_stops_in_array__different_array()
+    stops_array = [ "Aberdeen", "Stonehaven", "Montrose" ]
+    result = reverse_stops_in_array(stops_array)
+    assert_equal([ "Montrose", "Stonehaven", "Aberdeen" ], result)
+  end
+
+# 10. Print out all the stops using a for loop. Not testable :(
+# No test!
 
 end

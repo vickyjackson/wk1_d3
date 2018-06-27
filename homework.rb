@@ -1,50 +1,75 @@
 
-stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
 
+# Complete these tasks:
+# 1. Add "Edinburgh Waverley" to the end of the array
 def add_stop_to_end(stops_array, new_stop)
   result = stops_array.push(new_stop)
   return result
 end
 
+# 2. Add "Glasgow Queen St" to the start of the array
 def add_stop_to_start(stops_array, new_stop)
   result = stops_array.unshift(new_stop)
   return result
 end
 
+# 3. Add "Polmont" at the appropriate point (between "Falkirk High" and "Linlithgow")
 def add_stop_to_point(stops_array, stop_to_find, new_stop)
   index_of_stop= stops_array.index(stop_to_find)
   result = stops_array.insert((index_of_stop + 1), new_stop)
   return result
 end
 
+# 4. Work out the index position of "Linlithgow"
 def find_index_of_stop(stops_array, stop_to_find)
   result = stops_array.index(stop_to_find)
   return result
 end
 
+# 5. Remove "Livingston" from the array using its name
 def delete_stop_by_name(stops_array, stop_to_delete)
   stops_array.delete(stop_to_delete)
   return stops_array
 end
 
+# 6. Delete `"Cumbernauld"` from the array by index
 def delete_stop_by_index(stops_array, stop_to_delete)
   index_of_stop = find_index_of_stop(stops_array, stop_to_delete)
   stops_array.delete_at(index_of_stop)
   return stops_array
 end
 
+# 7. How many stops there are in the array?
 def count_stops_in_array(stops_array)
-  result = stops_array.length
+  result = stops_array.length()
   return result
 end
 
-# 7. How many stops there are in the array?
-
-# 8. How many ways can we return `"Falkirk High"` from the array?
+# 8. How many ways can we return "Falkirk High" from the array?
+=begin
+1. by providing the index
+2. by providing the name
+3. by calculating the start of the array plus x indices to get to Falkirk High
+4. by calculating the end of the array minus x indices to get to Falkirk High
+5. via a for loop
+6. via a while loop
+7. via select method
+8. via array.delete(stop)
+9. probably other ways too ;-)
+=end
 
 # 9. Reverse the positions of the stops in the array
+def reverse_stops_in_array(stops_array)
+  result = stops_array.reverse()
+  return result
+end
 
 # 10. Print out all the stops using a for loop
+print "Ex A, step 10: "
+for stop in stops_array
+  print stop
+end
 
 # Exercise B
 
