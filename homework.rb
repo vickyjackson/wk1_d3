@@ -22,7 +22,10 @@ def find_index_of_stop(stops_array, stop_to_find)
   return result
 end
 
-# 5. Remove `"Livingston"` from the array using its name
+def delete_stop_by_name(stops_array, stop_to_delete)
+  stops_array.delete(stop_to_delete)
+  return stops_array
+end
 
 # 6. Delete `"Cumbernauld"` from the array by index
 

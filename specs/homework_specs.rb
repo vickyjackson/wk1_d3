@@ -77,4 +77,18 @@ class FunctionsTest < MiniTest::Test
     assert_equal(nil, result)
   end
 
+# 5. Remove "Livingston" from the array using its name
+
+  def test_delete_stop_by_name__livingston()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = delete_stop_by_name(stops_array, "Livingston")
+    assert_equal(["Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Haymarket"], result)
+  end
+
+  def test_delete_stop_by_name__croy()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = delete_stop_by_name(stops_array, "Croy")
+    assert_equal(["Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket"], result)
+  end
+
 end
