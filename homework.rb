@@ -11,9 +11,13 @@ def add_to_start(array, string)
   return result
 end
 
-# 3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
+def add_to_point(array, stop, string)
+  index_of_item = array.index(stop)
+  result = array.insert((index_of_item + 1), string)
+  return result
+end
 
-# 4. Work out the index position of `"Linlithgow"`
+# 4. Work out the index position of "Linlithgow"
 
 # 5. Remove `"Livingston"` from the array using its name
 
