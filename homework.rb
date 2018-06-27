@@ -143,7 +143,14 @@ p users["Avril"][:pets][0][:species]
 # 5. Get the smallest of Erik's lottery numbers
 p users["Erik"][:lottery_numbers].min()
 # 6. Return an array of Avril's lottery numbers that are even
-
+lottery_numbers = users["Avril"][:lottery_numbers]
+new_array = []
+for number in lottery_numbers
+   if (number % 2 == 0)
+     new_array.push(number)
+   end
+end
+p new_array
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"][:lottery_numbers].push(7)
 # 8. Change Erik's hometown to Edinburgh
