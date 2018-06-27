@@ -105,4 +105,18 @@ class FunctionsTest < MiniTest::Test
     assert_equal([ "Croy", "Cumbernauld", "Falkirk High", "Livingston", "Haymarket" ], result)
   end
 
+# 7. How many stops there are in the array?
+
+  def test_count_stops_in_array__default_array()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = count_stops_in_array(stops_array)
+    assert_equal(6, result)
+  end
+
+  def test_count_stops_in_array__different_array()
+    stops_array = [ "Aberdeen", "Stonehaven", "Montrose" ]
+    result = count_stops_in_array(stops_array)
+    assert_equal(3, result)
+  end
+
 end

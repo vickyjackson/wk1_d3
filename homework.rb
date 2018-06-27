@@ -33,6 +33,11 @@ def delete_stop_by_index(stops_array, stop_to_delete)
   return stops_array
 end
 
+def count_stops_in_array(stops_array)
+  result = stops_array.length
+  return result
+end
+
 # 7. How many stops there are in the array?
 
 # 8. How many ways can we return `"Falkirk High"` from the array?
