@@ -91,4 +91,18 @@ class FunctionsTest < MiniTest::Test
     assert_equal(["Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket"], result)
   end
 
+# 6. Delete `"Cumbernauld"` from the array by index
+
+  def test_delete_stop_by_index__cumbernauld()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = delete_stop_by_index(stops_array, "Cumbernauld")
+    assert_equal([ "Croy", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ], result)
+  end
+
+  def test_delete_stop_by_index__Linlithgow()
+    stops_array = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+    result = delete_stop_by_index(stops_array, "Linlithgow")
+    assert_equal([ "Croy", "Cumbernauld", "Falkirk High", "Livingston", "Haymarket" ], result)
+  end
+
 end

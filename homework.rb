@@ -12,8 +12,8 @@ def add_stop_to_start(stops_array, new_stop)
 end
 
 def add_stop_to_point(stops_array, stop_to_find, new_stop)
-  index_of_item = stops_array.index(stop_to_find)
-  result = stops_array.insert((index_of_item + 1), new_stop)
+  index_of_stop= stops_array.index(stop_to_find)
+  result = stops_array.insert((index_of_stop + 1), new_stop)
   return result
 end
 
@@ -27,7 +27,11 @@ def delete_stop_by_name(stops_array, stop_to_delete)
   return stops_array
 end
 
-# 6. Delete `"Cumbernauld"` from the array by index
+def delete_stop_by_index(stops_array, stop_to_delete)
+  index_of_stop = find_index_of_stop(stops_array, stop_to_delete)
+  stops_array.delete_at(index_of_stop)
+  return stops_array
+end
 
 # 7. How many stops there are in the array?
 
